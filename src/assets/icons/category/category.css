@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "my-icon"; /* Project id 3917087 */
+  src: url('@/assets/icons/category/iconfont.woff2?t=1677328528699') format('woff2'),
+       url('@/assets/icons/category/iconfont.woff?t=1677328528699') format('woff'),
+       url('@/assets/icons/category/iconfont.ttf?t=1677328528699') format('truetype');
+}
+
+.my-icon {
+  font-family: "my-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.my-icon-category:before {
+  content: "\e605";
+}
+
