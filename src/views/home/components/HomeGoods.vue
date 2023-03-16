@@ -26,10 +26,12 @@ const rightGoods = computed(() => store.state.home.rightGoods);
 const getGoodsList = async () => {
   await store.dispatch("home/GET_GOODSLIST");
 };
+// 设置两列式瀑布流数据
 const getGoodItemList = async () => {
   await store.dispatch("home/GET_GOODITEMLIST");
 };
 onMounted(async () => {
+  // 有先后顺序 必须要先拿到GoodsList
   await getGoodsList();
   await getGoodItemList();
   loading.value = !loading.value

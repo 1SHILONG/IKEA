@@ -12,6 +12,7 @@ const getGoodsList = () => {
   return axios.get('/goodsList')
 }
 
+
 export { 
   getSwiperList,
   getBannerList,

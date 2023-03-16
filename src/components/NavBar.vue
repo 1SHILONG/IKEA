@@ -18,7 +18,7 @@
       </router-link>
       <router-link class="nav-list-item" to="cart">
         <van-icon name="shopping-cart-o" />
-        <div>购物车</div>
+        <div>购物袋</div>
       </router-link>
       <router-link class="nav-list-item" to="user">
         <van-icon name="manager-o" />

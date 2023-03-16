@@ -16,17 +16,16 @@
 <script setup>
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
-
 const router = useRouter(); // 全局路由对象
-const store = useStore(); // 将商品ID存在store中
+const store = useStore(); // 将商品ID传递出去
 const props = defineProps({
   goods: {
       type: Object,
       default: {}
   }
 })
-const gotoDetail = (id) => {
-  store.commit("home/SET_GOODSID", id);
+const gotoDetail = async (id) => {
+  await store.dispatch('detail/GET_DETAILDATA', id)
   router.push({
       path: `/detail/${id}`
   });

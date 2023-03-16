@@ -3,8 +3,12 @@ import App from './App.vue'; // 创建app实例
 import router from '@/router'; // 启用路由
 import store from '@/store'; // 数据管理
 import { 
+  ActionBar,
+  ActionBarButton,
+  ActionBarIcon,
   Button,
   Cascader,
+  Cell,
   ConfigProvider,
   Field,
   Form,
@@ -18,6 +22,7 @@ import {
   NoticeBar,
   Popup,
   Search,
+  ShareSheet,
   Skeleton,
   Sticky,
   Swipe,
@@ -36,6 +41,8 @@ app
   .use(router)
   .use(store)
   .use(Swipe)
+  .use(ShareSheet)
+  .use(Cell)
   .use(SwipeItem)
   .use(Icon)
   .use(Lazyload)
@@ -54,4 +61,7 @@ app
   .use(GridItem)
   .use(Form)
   .use(Button)
+  .use(ActionBar)
+  .use(ActionBarIcon)
+  .use(ActionBarButton)
   .mount('#app')

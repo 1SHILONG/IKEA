@@ -2,20 +2,22 @@
 import { reactive, onMounted } from 'vue';
 import { useRouter } from 'vue-router'; // hooks
 
+const state = reactive({
+  transitionName: 'slide-left'
+})
 const router = useRouter()
-// 路由跳转前 做件事
 // 路由守卫  生命周期
 router.beforeEach((to, from, next) => {
-  // if (to.meta.isLogin) { // 需要登录权限才能访问
+  // if (to.meta.pass) { // 需要登录权限才能访问
+  // 
   //     next('/login')
   // } else {
-    next()
+  next()
   // }
-
   if (to.meta.index > from.meta.index) {
-      // 从主页面 去到子页面
-      state.transitionName = 'slide-left'
-  } else if(to.meta.index < from.meta.index) {
+    // 从主页面 去到子页面
+    state.transitionName = 'slide-left'
+  } else if (to.meta.index < from.meta.index) {
     // 子页面回到主页面
     state.transitionName = 'slide-right'
   } else {
@@ -23,21 +25,22 @@ router.beforeEach((to, from, next) => {
     state.transitionName = ''
   }
 })
-
-const state = reactive({
-  transitionName: 'slide-left'
-})
-
 onMounted(() => {
-  // updateLogin()
-  // console.log(isLogin);
+
 })
 </script>
 
 <template>
   <router-view v-slot="{ Component }">
     <transition :name="state.transitionName">
-      <component :is="Component" />
+      <keep-alive> 
+        <component :is='Component' :key="$route.name" v-if="$route.meta.keepAlive" />
+      </keep-alive>
+    </transition>
+  </router-view>
+  <router-view v-slot="{ Component }">
+    <transition :name="state.transitionName">
+      <component :is='Component' :key="$route.name" v-if="!$route.meta.keepAlive" />
     </transition>
   </router-view>
 </template>

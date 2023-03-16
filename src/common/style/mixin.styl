@@ -9,3 +9,14 @@ wh($width, $height)
 fj($type=space-between)
     display flex
     justify-content $type
+// 1px边框
+border-1px($color, $width)
+  position relative
+  &:after
+    display block
+    position absolute
+    left 0
+    bottom 0
+    width $width
+    border-top 1px solid $color
+    content ' '

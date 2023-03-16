@@ -6,15 +6,15 @@
       </template>
     </van-image>
   </div>
-  <div v-else>
+  <div style="width: 100vw;" v-else>
     <!-- 顶部导航 -->
     <HomeHeader :isSort="isSort" />
     <!-- 轮播图 -->
-    <HomeSwiper :swiperList="swiperList" />
+    <Swiper :swiperList="swiperList" />
     <!-- 消息通知栏 -->
     <NoticeBar />
     <!-- 横幅滑动栏 -->
-    <HomeBanner :bannerList="bannerList"/>
+    <HomeBanner :bannerList="bannerList" />
     <!-- 商品区 -->
     <HomeGoods />
     <!-- 标签栏 -->
@@ -23,14 +23,16 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref, nextTick, onBeforeUnmount } from "vue";
+import { computed, onMounted, ref, nextTick, onBeforeUnmount, onActivated } from "vue";
+import { onBeforeRouteLeave } from "vue-router";
 import { useStore } from "vuex";
 import NavBar from "~/NavBar.vue";
-import HomeSwiper from "./components/HomeSwiper.vue";
+import Swiper from "@/components/Swiper.vue";
 import HomeHeader from "./components/HomeHeader.vue";
 import HomeBanner from "./components/HomeBanner.vue";
 import NoticeBar from "./components/NoticeBar.vue";
 import HomeGoods from "./components/HomeGoods.vue";
+import { getLocal, setLocal} from "@/common/js/utils";
 import _ from 'lodash';
 
 const loading = ref(true);
@@ -39,7 +41,7 @@ const isToggle = ref(false);
 const store = useStore(); // 拿到中央数据
 const swiperList = computed(() => store.state.home.swiperList);
 const bannerList = computed(() => store.state.home.bannerList);
-
+// 封装请求 在onMounted里尽量少放逻辑
 const getSwiperList = async () => {
   await store.dispatch("home/GET_SWIPERLIST");
 };
@@ -49,29 +51,47 @@ const getBannerList = async () => {
 // 监听滚动触发事件
 const setHeaderScroll = () => {
   let scrollTop = window.pageYOffset || document.documentElement || document.body.scrollTop;
+  // 头部搜索栏缩放
   if (scrollTop > 0) {
-    isSort.value = true;
+    if (!isSort.value) {
+      isSort.value = true;
+    }
   } else {
-    isSort.value = false;
+    if (isSort.value) {
+      isSort.value = false;
+    }
   };
+  // 回到顶部事件
   if (scrollTop > 200) {
-    isToggle.value = true
+    if (!isToggle.value) {
+      isToggle.value = true;
+    }
   } else {
-    isToggle.value = false
+    if (isToggle.value) {
+      isToggle.value = false;
+    }
   };
 };
-const throttleHandleScroll =  _.throttle(setHeaderScroll, 200);
-nextTick(() => {
-  window.addEventListener('scroll', _.throttle(setHeaderScroll, 200))
+// 方便卸载时移除监听
+const throttleHandleScroll = _.throttle(setHeaderScroll, 200);
+nextTick(() => { // 更早拿到更新数据
+  window.addEventListener('scroll', _.throttle(setHeaderScroll, 200));
 })
-
 onMounted(async () => {
-  await getSwiperList();
-  await getBannerList();
+  // 并发执行请求 只要最慢的请求时间完成即可
+  await Promise.all([getSwiperList(), getBannerList()]);
   loading.value = !loading.value;
 });
-onBeforeUnmount(() => {
+onBeforeUnmount(() => { // 卸载时移除监听的事件
   window.removeEventListener('scroll', throttleHandleScroll);
+})
+onActivated(() => { // 进入Home页面触发 恢复至退出前的位置
+  if (getLocal('scroll')) {
+    window.scrollTo(0, parseInt(getLocal('scroll')));
+  }
+})
+onBeforeRouteLeave(() => { // 退出Home页面时记录 当前位置
+  setLocal('scroll', document.documentElement.scrollTop);
 })
 </script>
 

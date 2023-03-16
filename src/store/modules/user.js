@@ -1,10 +1,10 @@
 
 const state = {
-	isLogin: false // 判断是否需要登录
+
 }
 
 const mutations = {
-  SET_LOGIN: (state, val) => state.isLogin = val
+  
 }
 
 const actions = {

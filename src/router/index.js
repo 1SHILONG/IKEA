@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-
+import Home from '@/views/home/index.vue'
 const routes = [
   {
     path: '/',
@@ -9,9 +9,10 @@ const routes = [
     path: '/home',
     name: 'home',
     meta: {
+      keepAlive: true,
       index: 1
     },
-    component: import('@/views/home/index.vue') // 路由懒加载
+    component: Home 
   },
   {
     path: '/category',
@@ -19,14 +20,13 @@ const routes = [
     meta: {
       index: 1
     },
-    component: () => import('@/views/Category/index.vue')
+    component: () => import('@/views/Category/index.vue') // 路由懒加载
   },
   {
     path: '/cart',
     name: 'cart',
     meta: {
       index: 1,
-      isLogin: true
     },
     component: () => import('@/views/Cart/index.vue')
   },
@@ -35,7 +35,6 @@ const routes = [
     name: 'user',
     meta: {
       index: 1,
-      isLogin: true
     },
     component: () => import('@/views/User/index.vue')
   },
@@ -50,11 +49,17 @@ const routes = [
   {
     path: '/search',
     name: 'search',
+    meta: {
+      index: 2
+    },
     component: () => import('@/views/Search/index.vue')
   },
   {
     path: '/level',
     name: 'level',
+    meta: {
+      index: 3
+    },
     component: () => import('@/views/Search/level.vue')
   },
   {
