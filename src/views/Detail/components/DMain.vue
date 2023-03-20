@@ -19,13 +19,11 @@
 </script>
 
 <style lang="stylus" scoped>
-@import '../../../common/style/mixin.styl';
 .container
   background #f7f7f7
+  height auto
   .d-main-hd
-    wh(100%, 6.133333rem)
     padding .16rem 0
   .address
-    wh(100%, 3.093333rem)
     padding .16rem 0
 </style>

@@ -7,7 +7,7 @@ import { useStore } from "vuex";
 import { computed, onMounted, ref } from "vue";
 import Goods from "@/components/Goods.vue";
 let loading = ref(true);
-const text = ref('猜你喜欢')
+const text = ref('相关商品')
 const store = useStore();
 const leftGoods = computed(() => store.state.home.leftGoods);
 const rightGoods = computed(() => store.state.home.rightGoods);

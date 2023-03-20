@@ -23,7 +23,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { getLocal, setLocal, LOGS } from "@/common/js/utils";
+import { getLocal, setLocal, deleteLocal, LOGS } from "@/common/js/utils";
 
 const value = ref('');
 const showLogs = ref(false);
@@ -55,7 +55,7 @@ const back = () => {
   router.go(-1); // 返回上一页
 }
 const clear = () => {
-  localStorage.removeItem(LOGS); // 把本地logs清空
+  deleteLocal(LOGS); // 把本地logs清空
   showLogs.value = false; // 隐藏历史记录
 }
 onMounted(() => {

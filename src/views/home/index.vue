@@ -48,6 +48,9 @@ const getSwiperList = async () => {
 const getBannerList = async () => {
   await store.dispatch("home/GET_BANNERLIST");
 };
+const getGoodsList = async () => {
+  await store.dispatch("home/GET_GOODSLIST");
+}
 // 监听滚动触发事件
 const setHeaderScroll = () => {
   let scrollTop = window.pageYOffset || document.documentElement || document.body.scrollTop;
@@ -79,7 +82,7 @@ nextTick(() => { // 更早拿到更新数据
 })
 onMounted(async () => {
   // 并发执行请求 只要最慢的请求时间完成即可
-  await Promise.all([getSwiperList(), getBannerList()]);
+  await Promise.all([getSwiperList(), getBannerList(),getGoodsList()]);
   loading.value = !loading.value;
 });
 onBeforeUnmount(() => { // 卸载时移除监听的事件

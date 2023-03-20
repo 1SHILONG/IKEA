@@ -2,25 +2,30 @@
   <div>
     <DHeader />
     <DMain />
+    <DParticular />
+    <DGoods />
     <DActionBar />
-    <div class="container"></div>
   </div>
 </template>
 
 <script setup>
 import DHeader from './components/DHeader.vue';
 import DMain from './components/DMain.vue';
+import DParticular from './components/DParticular.vue';
 import DActionBar from './components/DActionBar.vue';
-import { showLoadingToast, closeToast } from 'vant';
-showLoadingToast({
-  duration: 0,
-  overlay: true
-})
-closeToast()
+import DGoods from './components/DGoods.vue';
+import { useStore } from 'vuex';
+import { onMounted } from 'vue';
+
+const store = useStore();
+const getGoodsList = async () => {
+  await store.dispatch("home/GET_GOODSLIST");
+}
+onMounted(async () => {
+  await getGoodsList();
+});
 </script>
 
 <style lang="stylus" scoped>
-.container
-  width 100vw
-  height 1.6rem
+
 </style>

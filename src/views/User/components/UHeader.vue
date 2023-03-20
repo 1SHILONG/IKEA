@@ -11,13 +11,16 @@
 <script setup>
 import { useStore } from 'vuex';
 import { ref } from 'vue';
+import { deleteLocal, TOKEN } from '../../../common/js/utils';
 const store = useStore();
 const show = ref(false);
 const showPopup = () => {
   show.value = true;
 };
+// 退出登录 并删除token
 const quitLogin = () => {
   store.commit('login/SET_LOGIN', false)
+  deleteLocal(TOKEN) 
 }
 </script>
 

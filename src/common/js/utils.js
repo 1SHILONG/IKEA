@@ -16,9 +16,14 @@ const setLocal = (key, value) => {
  localStorage.setItem(key, value)
 }
 
+const deleteLocal = (key) => {
+  localStorage.removeItem(key)
+}
+
 export {
   getLocal,
   setLocal,
+  deleteLocal,
   ADDRESS_KEY,
   LOGS,
   DETAILID,

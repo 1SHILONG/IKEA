@@ -1,19 +1,20 @@
 <script setup>
-import { reactive, onMounted } from 'vue';
+import { reactive } from 'vue';
+import { getLocal, TOKEN } from './common/js/utils'
 import { useRouter } from 'vue-router'; // hooks
-
+import { useStore } from 'vuex';
 const state = reactive({
   transitionName: 'slide-left'
 })
+const store = useStore()
 const router = useRouter()
 // 路由守卫  生命周期
 router.beforeEach((to, from, next) => {
-  // if (to.meta.pass) { // 需要登录权限才能访问
-  // 
-  //     next('/login')
-  // } else {
-  next()
-  // }
+  if (to.meta.isPass && getLocal(TOKEN)) { // 需要登录权限才能访问
+      store.state.login.isLogin = true
+      next()
+  }
+    next()
   if (to.meta.index > from.meta.index) {
     // 从主页面 去到子页面
     state.transitionName = 'slide-left'
@@ -24,9 +25,6 @@ router.beforeEach((to, from, next) => {
     // 平级
     state.transitionName = ''
   }
-})
-onMounted(() => {
-
 })
 </script>
 

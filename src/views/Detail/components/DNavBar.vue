@@ -1,5 +1,5 @@
 <template>
-  <div class="d-nav-bar">
+  <div class="d-nav-bar van-hairline--bottom">
     <div class="arrow">
       <van-icon name="arrow-left" @click="back" />
     </div>
@@ -59,7 +59,6 @@ const onSelect = (option) => {
     height 100%
     left 7.733333rem 
   .share
-    border-1px(#f5f5f5, 375px)
     font-size 20px
     line-height 1.333333rem
     flex 1

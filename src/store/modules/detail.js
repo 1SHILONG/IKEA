@@ -4,12 +4,14 @@ import {
 
 const state = {
   swiperList:[],
-  description: {}
+  description: {},
+	particular: ''
 }
 
 const mutations = {
   SET_SWIPERLIST: (state, val) => state.swiperList = val,
   SET_DESCRIPTION: (state, val) => state.description = val,
+  SET_PARTICULAR: (state, val) => state.particular = val,
 }
 
 const actions = {
@@ -17,6 +19,7 @@ const actions = {
 		const { result } = await getDetailData(id)
 		commit('SET_SWIPERLIST', result.swipeImgUrls)
 		commit('SET_DESCRIPTION', result.description)
+		commit('SET_PARTICULAR', result.particular)
 	},
 }
 

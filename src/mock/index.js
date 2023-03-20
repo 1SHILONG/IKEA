@@ -3,6 +3,7 @@ import swiperList from './data/swiperList.js'
 import bannerList from './data/bannerList.js'
 import goodsList from './data/goodsList.js'
 import detailData from './data/detailData.js'
+import categoryData from './data/categoryData.js'
 
 const usersMap = new Map()// 存储全量用户数据
 const regName = new Set() // 存值用户注册账号
@@ -27,6 +28,12 @@ Mock.mock(/\/goodsList/, 'get', () => {
   return {
     code: 0,
     result: goodsList
+  }
+})
+Mock.mock(/\/categoryData/, 'get', () => {
+  return {
+    code: 0,
+    result: categoryData
   }
 })
 // 模拟详情页传参跳转

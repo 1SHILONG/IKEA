@@ -3,12 +3,13 @@ import App from './App.vue'; // 创建app实例
 import router from '@/router'; // 启用路由
 import store from '@/store'; // 数据管理
 import { 
-  ActionBar,
-  ActionBarButton,
   ActionBarIcon,
   Button,
+  Card,
   Cascader,
   Cell,
+  Checkbox,
+  CheckboxGroup,
   ConfigProvider,
   Field,
   Form,
@@ -23,14 +24,21 @@ import {
   Popup,
   Search,
   ShareSheet,
+  Sidebar,
+  SidebarItem,
   Skeleton,
+  Stepper,
   Sticky,
+  SubmitBar,
   Swipe,
+  SwipeCell,
   SwipeItem,
+  Tab,
+  Tabs,
+  TextEllipsis
 } from 'vant'; 
 import 'vant/lib/index.css';
 import 'lib-flexible/flexible';// rem 移动端适配
-import '@/assets/main.css';
 import '@/mock/index.js';
 import '@/common/style/index.styl';
 
@@ -61,7 +69,16 @@ app
   .use(GridItem)
   .use(Form)
   .use(Button)
-  .use(ActionBar)
   .use(ActionBarIcon)
-  .use(ActionBarButton)
+  .use(TextEllipsis)
+  .use(SwipeCell)
+  .use(Card)
+  .use(SubmitBar)
+  .use(Checkbox)
+  .use(CheckboxGroup)
+  .use(Tab)
+  .use(Tabs)
+  .use(Sidebar)
+  .use(SidebarItem)
+  .use(Stepper)
   .mount('#app')

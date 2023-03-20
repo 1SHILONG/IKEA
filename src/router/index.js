@@ -27,6 +27,7 @@ const routes = [
     name: 'cart',
     meta: {
       index: 1,
+      isPass: true 
     },
     component: () => import('@/views/Cart/index.vue')
   },
@@ -35,6 +36,7 @@ const routes = [
     name: 'user',
     meta: {
       index: 1,
+      isPass: true
     },
     component: () => import('@/views/User/index.vue')
   },
@@ -65,6 +67,9 @@ const routes = [
   {
     path: '/login',
     name: 'login',
+    meta: {
+      index: 2
+    },
     component: () => import('@/views/Login/index.vue')
   }
 ]

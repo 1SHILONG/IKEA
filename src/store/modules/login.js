@@ -1,6 +1,6 @@
 
 const state = {
-	isLogin: false // 判断是否需要登录
+	isLogin: false // 判断是否登录
 }
 
 const mutations = {
