@@ -3,7 +3,7 @@
   <IsLogin />
   </div>
   <div v-else>
-    <div v-if="false">
+    <div v-if="!length">
       <Empty />
     </div>
     <div v-else>
@@ -21,8 +21,10 @@ import Empty from './components/Empty.vue';
 import CGoods from './components/CGoods.vue';
 import CProducts from './components/CProducts.vue';
 import { useStore } from 'vuex';
-import { onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
 const store = useStore();
+const length = computed(() => store.getters['cart/length'])
+
 const getGoodsList = async () => {
   await store.dispatch("home/GET_GOODSLIST");
 }

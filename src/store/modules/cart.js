@@ -51,7 +51,8 @@ const getters = {
       totalPrice: totalPrice,
       totalQuantity: totalQuantity
     }
-  }
+  },
+  length: (state) => state.productItms.length
 }
 
 export default {
