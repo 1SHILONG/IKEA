@@ -71,6 +71,14 @@ const routes = [
       index: 2
     },
     component: () => import('@/views/Login/index.vue')
+  },
+  {
+    path: '/other',
+    name: 'other',
+    meta: {
+      index: 2
+    },
+    component: () => import('@/views/Other/index.vue')
   }
 ]
 

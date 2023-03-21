@@ -43,7 +43,6 @@ const props = defineProps({
 const backTop = () => {
   let scrollTop = window.pageYOffset || document.documentElement || document.body.scrollTop;
   if (scrollTop > 0) { // 防止频繁点击
-    // document.documentElement.scrollTop = document.body.scrollTop = 0;
     window.scrollTo({
       top: 0,
       behavior: "smooth"

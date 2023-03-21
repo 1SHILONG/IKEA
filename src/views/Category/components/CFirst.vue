@@ -19,15 +19,16 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import { reactive, nextTick, onBeforeUnmount } from 'vue';
+import _ from 'lodash';
 import CItem from './CItem.vue';
+
 defineProps({
   firstList: {
     type: Array,
     default: []
   }
 })
-
 let state = reactive({
   show: [true] // 高亮效果默认选择第一项
 })
@@ -35,8 +36,54 @@ let state = reactive({
 const onClick = (index, firstList) => {
   state.show = Array(firstList.length) 
   state.show[index] = true
+  window.scrollTo(0, 500 * index)
 }
-
+// 滚动响应侧边栏高亮
+const categoryScroll = (firstList) => {
+  let scrollTop = window.pageYOffset || document.documentElement || document.body.scrollTop;
+  let x = Math.floor(scrollTop / 400)
+  switch (x) {
+    case 0:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+    case 1:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+    case 2:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+    case 3:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+    case 4:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+    case 5:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+    case 6:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+    case 7:
+    state.show = Array(firstList.length) 
+    state.show[x] = true
+    break;
+  }
+}
+const handleScroll = _.throttle(categoryScroll, 200);
+nextTick(() => { // 更早拿到更新数据
+  window.addEventListener('scroll', _.throttle(categoryScroll, 200));
+})
+onBeforeUnmount(() => { // 卸载时移除监听的事件
+  window.removeEventListener('scroll', handleScroll);
+})
 
 
 </script>

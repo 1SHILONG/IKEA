@@ -1,6 +1,8 @@
 <template>
   <div class="container" v-for="item in secondList" :key="index">
-    <img :src="item.imgSrc">
+    <router-link to="/other">
+      <img :src="item.imgSrc">
+    </router-link>
     <div class="title">{{ item.title }}</div>
   </div>
 </template>

@@ -24,6 +24,7 @@ const props = defineProps({
       default: {}
   }
 })
+// 带参数跳转至详情页 通过id取到对应的商品数据
 const gotoDetail = async (id) => {
   await store.dispatch('detail/GET_DETAILDATA', id)
   router.push({
