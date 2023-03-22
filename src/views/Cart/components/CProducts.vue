@@ -34,10 +34,12 @@ import { computed, ref } from 'vue';
 const store = useStore()
 const checked = ref([]);
 const checkboxGroup = ref(null);
+// let tlPrice = ref(0)
 let x = ref(false)
 const checkAll = () => {
   x = !x 
   checkboxGroup.value.toggleAll(x); // 全选 反选
+  // tlPrice.value = o.totalPrice;
 }
 const products = computed(() => store.getters['cart/cartProducts']) // 拿到商品数据 
 const o = computed(() => store.getters['cart/totalProducts']) // 拿到总量数据

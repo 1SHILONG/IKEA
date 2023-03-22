@@ -52,6 +52,7 @@ const getters = {
       totalQuantity: totalQuantity
     }
   },
+  // 购物商品数组长度
   length: (state) => state.productItms.length
 }
 

@@ -32,7 +32,6 @@
 
 <script setup>
 import '@/assets/icons/category/category.css'; // 引入自定义图标
-// import { onMounted, ref } from 'vue';
 const props = defineProps({
   isToggle: {
     type: Boolean,
