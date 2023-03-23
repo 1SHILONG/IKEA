@@ -4,16 +4,16 @@
       &nbsp探索家居灵感。
     </span>
   </h1>
-    <div class="container">
-      <div class="scroll-wrapper" ref="scroll">
-        <div class="scroll-content" ref="content">
-          <div class="sct-item" v-for="item in props.bannerList" :key="index" v-lazy="item">
-            <img :src="item.imgSrc" />
+  <div class="container">
+    <div class="scroll-wrapper" ref="scroll">
+      <div class="scroll-content" ref="content">
+        <div class="sct-item" v-for="item in props.bannerList" :key="index" v-lazy="item">
+            <img :src="item.imgSrc"/>
             <div class="dsc-item">{{ item.title }}</div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script setup>
@@ -31,7 +31,6 @@ const content = ref(null);
 let bs = null;
 let wrapperWidth = 0;
 let contentWidth = 0;
-
 onMounted(() => {
   wrapperWidth = scroll.value.offsetWidth;
   contentWidth = content.value.offsetWidth;

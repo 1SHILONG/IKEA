@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="card">
+      <router-link to="/vip">
       <div class="content">
         <div class="desc">
           <text style="color: white;font-size: 16px;font-weight: 500;">加入宜家俱乐部</text>
@@ -8,6 +9,7 @@
         </div>
         <button>免费加入</button>
       </div>
+    </router-link>
     </div>
     <van-grid square>
       <van-grid-item v-for="(item, index) in items" :key="index" :icon="item.icon" :text="item.text" />

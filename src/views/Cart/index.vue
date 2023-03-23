@@ -22,14 +22,23 @@ import CGoods from './components/CGoods.vue';
 import CProducts from './components/CProducts.vue';
 import { useStore } from 'vuex';
 import { onMounted, computed } from 'vue';
+import { closeToast, showLoadingToast } from 'vant';
 const store = useStore();
 const length = computed(() => store.getters['cart/length'])
+showLoadingToast({
+  message: '加载中...',
+  forbidClick: true,
+  overlay: true,
+  duration: 0,
+  overlayStyle: { backgroundColor: "#fff" }
+});
 
 const getGoodsList = async () => {
   await store.dispatch("home/GET_GOODSLIST");
 }
 onMounted(async () => {
   await getGoodsList();
+  closeToast()
 });
 </script>
 

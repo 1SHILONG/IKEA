@@ -9,14 +9,15 @@ const mutations = {
     // 重复添加
     if (state.products.has(val.iid)) {
       if (state.products.get(val.iid).inventory > 0) {
-        val.inventory = val.inventory - val.quantity
-        val.quantity += val.quantity
+        val.inventory = val.inventory - val.count
+        val.quantity = val.quantity + val.count
       } else {
         showToast('库存不足, 请选择其他商品')
       }
     } else {
       // 第一次添加
       state.products.set(val.iid, val)
+      val.quantity = val.count
       val.inventory = val.inventory - val.quantity
       state.productItms.push(val)
     }

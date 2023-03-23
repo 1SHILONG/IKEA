@@ -79,6 +79,14 @@ const routes = [
       index: 2
     },
     component: () => import('@/views/Other/index.vue')
+  },
+  {
+    path: '/vip',
+    name: 'vip',
+    meta: {
+      index: 2
+    },
+    component: () => import('@/views/Other/vip.vue')
   }
 ]
 

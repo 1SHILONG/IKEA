@@ -2,11 +2,11 @@
   <div style="width: 100vw;">
     <DNavBar />
     <Swiper :swiperList="swiperList" autoplay="0"/>
-    <router-link class="vip-bar" to="/"> 
+    <router-link class="vip-bar" to="/vip"> 
       <div class="vip-icon">
         <van-icon name="coupon-o" class="coupon-o"/>
       </div>
-      <text class="vip-title">加入会员，享99元减5元新人券</text>
+        <text class="vip-title">加入会员，享99元减5元新人券</text>
       <van-icon name="arrow" class="arrow"/>
     </router-link>
     <div class="content">

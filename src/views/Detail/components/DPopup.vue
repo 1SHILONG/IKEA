@@ -34,8 +34,7 @@ const addToCart = () => {
       path: '/login'
     })
   } else {
-    console.log(props.product,'????');
-    props.product.quantity = count.value < props.product.inventory ? count.value : props.product.inventory;
+    props.product.count = count.value < props.product.inventory ? count.value : props.product.inventory;
     store.commit('cart/SET_PRODUCTS', props.product); // 添加商品至购物车
   }
 }

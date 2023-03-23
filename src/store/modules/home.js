@@ -34,7 +34,7 @@ const actions = {
 		commit('SET_BANNERLIST', result)
 	},
 	async GET_GOODSLIST({ commit }) {
-		if (state.allGoods.length > 0) return
+		// if (state.allGoods.length > 0) return
 		const { result } = await getGoodsList()
 		commit('SET_GOODSLIST', result)
 	},

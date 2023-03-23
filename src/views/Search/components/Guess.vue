@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-const items = ["书桌", "床", "手推车", "桌子", "毕利", "鞋柜", "沙发", "沙发",]
+const items = ["书桌", "床", "手推车", "桌子", "毕利", "鞋柜", "沙发", "椅子"]
 </script>
 
 <style lang="stylus" scoped>

@@ -80,6 +80,7 @@ import { useStore } from 'vuex';
 import { doLogin } from '@/service/login';
 import { setLocal, TOKEN } from '@/common/js/utils.js'
 import { showFailToast, showSuccessToast } from 'vant';
+import md5 from 'js-md5'; // 单向加密
 const state = reactive({
   show: true,
   username: '',
@@ -93,9 +94,11 @@ const toggle = () => state.show = !state.show; // 切换登录 注册
 const store = useStore(); 
 const onSubmit = async (values) => {
   if (register.value) { // 拿到注册页的values
+    values.regpassword = md5(values.regpassword) // 密码不能明文传输
     const res = await doLogin(values, 'register') 
     res ? showFailToast('用户已注册') : toggle(); // 是否重复注册
   } else if (login.value) { // 拿到登录页的values
+    values.password = md5(values.password)
     const data = await doLogin(values, 'login')
     if (data.code != 0) { // 登录失败
       showFailToast(data.msg) // 提示失败原因

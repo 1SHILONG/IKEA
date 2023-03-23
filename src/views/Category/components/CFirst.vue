@@ -13,7 +13,7 @@
     </div>
     <div style="width: 108px;background-color: #f7f8fa;"></div>
     <div class="goods" >
-      <CItem v-for="item in firstList" :key="index" :items="item.goods" :title="item.title"/>
+      <CItem v-for="item in firstList" :key="index" :items="item.goods" :title="item.title" />
     </div>
   </div>
 </template>

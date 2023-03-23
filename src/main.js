@@ -42,7 +42,6 @@ import 'lib-flexible/flexible';// rem 移动端适配
 import '@/mock/index.js';
 import '@/common/style/index.styl';
 
-
 const app = createApp(App)
 
 app 
