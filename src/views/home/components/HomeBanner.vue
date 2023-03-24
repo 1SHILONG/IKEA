@@ -7,7 +7,7 @@
   <div class="container">
     <div class="scroll-wrapper" ref="scroll">
       <div class="scroll-content" ref="content">
-        <div class="sct-item" v-for="item in props.bannerList" :key="index" v-lazy="item">
+        <div class="sct-item" v-for="(item, index) in props.bannerList" :key="index" v-lazy="item">
             <img :src="item.imgSrc"/>
             <div class="dsc-item">{{ item.title }}</div>
         </div>

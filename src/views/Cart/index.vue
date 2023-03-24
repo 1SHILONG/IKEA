@@ -33,13 +33,14 @@ showLoadingToast({
   overlayStyle: { backgroundColor: "#fff" }
 });
 
-const getGoodsList = async () => {
-  await store.dispatch("home/GET_GOODSLIST");
-}
 onMounted(async () => {
   await getGoodsList();
   closeToast()
 });
+const getGoodsList = async () => {
+  await store.dispatch("home/GET_GOODSLIST");
+}
+
 </script>
 
 <style lang="stylus" scoped>
