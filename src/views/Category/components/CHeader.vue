@@ -2,7 +2,7 @@
   <div class="container van-hairline--bottom">
     <div class="c-search">
       <van-swipe class="c-swipe" vertical :autoplay="3000" :show-indicators="false">
-        <van-swipe-item v-for="hotword in hotWords" :key="index" class="c-swipe-item">{{ hotword }}</van-swipe-item>
+        <van-swipe-item v-for="(hotword, index) in hotWords" :key="index" class="c-swipe-item">{{ hotword }}</van-swipe-item>
       </van-swipe>
     </div>
     <div style="height: 24px;display: inline-block;line-height: 50px; margin-left: 14px;">
