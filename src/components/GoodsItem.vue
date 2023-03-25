@@ -1,6 +1,7 @@
 <template>
   <div class="item" @click="gotoDetail(props.goods.id)">
       <div>
+        <!-- 瀑布流图片随机高度 -->
         <img :src="goods.imgSrc" :style="{ height: `${props.goods.height}px`}"/>
       </div>
       <p class="title">{{goods.title}}</p>
@@ -26,7 +27,7 @@ const props = defineProps({
 })
 // 带参数跳转至详情页 通过id取到对应的商品数据
 const gotoDetail = async (id) => {
-  await store.dispatch('detail/GET_DETAILDATA', id)
+  await store.dispatch('detail/GET_DETAILDATA', id);
   router.push({
       path: `/detail/${id}`
   });

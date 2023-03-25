@@ -4,6 +4,7 @@ import router from '@/router'; // 启用路由
 import store from '@/store'; // 数据管理
 import { 
   ActionBarIcon,
+  BackTop,
   Button,
   Card,
   Cascader,
@@ -80,4 +81,5 @@ app
   .use(Sidebar)
   .use(SidebarItem)
   .use(Stepper)
+  .use(BackTop)
   .mount('#app')

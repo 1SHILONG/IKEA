@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
 const props = defineProps({
@@ -25,6 +25,8 @@ const props = defineProps({
   }
 })
 let count = ref(1)
+// 子组件通信
+const emit = defineEmits(['changeShow'])
 const store = useStore()
 const router = useRouter()
 const isLogin = store.state.login.isLogin
@@ -36,6 +38,7 @@ const addToCart = () => {
   } else {
     props.product.count = count.value < props.product.inventory ? count.value : props.product.inventory;
     store.commit('cart/SET_PRODUCTS', props.product); // 添加商品至购物车
+    emit('changeShow', false) // 向父组件传值 关闭弹出层
   }
 }
 </script>

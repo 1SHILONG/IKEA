@@ -1,13 +1,14 @@
 <template>
-  <Goods :leftGoods="leftGoods" :rightGoods="rightGoods" :loading="loading" :text="text"/>
+    <Goods ref="content" :leftGoods="leftGoods" :rightGoods="rightGoods" :loading="loading" :text="text"/>
 </template>
 
 <script setup>
 import { useStore } from "vuex";
 import { computed, onMounted, ref } from "vue";
 import Goods from "@/components/Goods.vue";
+
 let loading = ref(true);
-const text = ref('猜你喜欢')
+const text = ref('猜你喜欢');
 const store = useStore();
 const leftGoods = computed(() => store.state.home.leftGoods);
 const rightGoods = computed(() => store.state.home.rightGoods);
@@ -17,9 +18,13 @@ const getGoodItemList = async () => {
 };
 onMounted(async () => {
   await getGoodItemList();
-  loading.value = !loading.value
+  loading.value = !loading.value;
 })
 </script>
 
 <style lang="stylus" scoped>
+.warpper
+  height 1000px
+  overflow hidden
+  // white-space nowrap 
 </style>

@@ -3,7 +3,7 @@
   <div style="width: 100vw;height: .053333rem;background-color: rgba(217,217,217,0.4);"></div>
   <van-checkbox-group v-model="checked" ref="checkboxGroup">
     <van-swipe-cell v-for="item in products" :key="item.id">
-        <van-checkbox :name="item.id" v-model="checked" class="che-button" @click="checksss"></van-checkbox>
+        <van-checkbox :name="item.id" v-model="checked" class="che-button"></van-checkbox>
         <van-card 
           :num="item.quantity" 
           :price="item.price" 
@@ -41,9 +41,6 @@ const checkAll = () => {
 }
 const products = computed(() => store.getters['cart/cartProducts']) // 拿到商品数据 
 const o = computed(() => store.getters['cart/totalProducts']) // 拿到总量数据
-const checksss = () => {
-  console.log(checkboxGroup);
-}
 const deleteProduct = (item) => { // 删除商品项
   if (store.state.cart.products.get(item.id)) {
     store.commit('cart/DETALE_PRODUCT', item.id)

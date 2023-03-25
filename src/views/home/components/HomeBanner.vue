@@ -7,8 +7,10 @@
   <div class="container">
     <div class="scroll-wrapper" ref="scroll">
       <div class="scroll-content" ref="content">
-        <div class="sct-item" v-for="item in props.bannerList" :key="index" v-lazy="item">
+        <div class="sct-item" v-for="(item, index) in props.bannerList" :key="index" v-lazy="item">
+          <router-link to="/other">
             <img :src="item.imgSrc"/>
+          </router-link>
             <div class="dsc-item">{{ item.title }}</div>
         </div>
       </div>
@@ -18,6 +20,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+// 按需加载 只要核心部分
 import BScroll from '@better-scroll/core';
 
 const props = defineProps({
@@ -34,10 +37,12 @@ let contentWidth = 0;
 onMounted(() => {
   wrapperWidth = scroll.value.offsetWidth;
   contentWidth = content.value.offsetWidth;
+  // betterscroll 会阻止原生click 需要设置click参数
   bs = new BScroll(scroll.value, {
-    probeType: 3,
+    probeType: 2,
     scrollX: true,
     scrollY: false,
+    click: true
   })
 })
 

@@ -48,8 +48,9 @@ const getSwiperList = async () => {
 const getBannerList = async () => {
   await store.dispatch("home/GET_BANNERLIST");
 };
-const getGoodsList = async () => {
-  await store.dispatch("home/GET_GOODSLIST");
+// 首页第一次加载数据 请求第一页数据
+const getGoodsList = async (page = 1) => {
+  await store.dispatch("home/GET_GOODSLIST", page);
 }
 // 监听滚动触发事件
 const setHeaderScroll = () => {

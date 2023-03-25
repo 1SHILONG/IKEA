@@ -10,6 +10,7 @@ const state = {
 	allGoods: [],
 	leftGoods: [],
 	rightGoods: [],
+	isOver: false,
 	checkoutStatus: null
 }
 
@@ -20,6 +21,7 @@ const mutations = {
 	SET_GOODSLIST: (state, val) => state.allGoods = val,
 	SET_LEFTLIST: (state, val) => state.leftGoods = val,
 	SET_RIGHTLIST: (state, val) => state.rightGoods = val,
+	SET_ISOVER: (state, val) => state.isOver = !val
 }
 // 触发mutations
 const actions = {
@@ -33,9 +35,13 @@ const actions = {
 		const { result } = await getBannerList()
 		commit('SET_BANNERLIST', result)
 	},
-	async GET_GOODSLIST({ commit }) {
-		// if (state.allGoods.length > 0) return
-		const { result } = await getGoodsList()
+	// 分页处理数据 一次只请求一页数据
+	async GET_GOODSLIST({ commit }, page) {
+		const { result } = await getGoodsList(page)
+		if (!result) { 
+		commit('SET_ISOVER', result)
+		return // 全部数据取完 直接return
+		} 
 		commit('SET_GOODSLIST', result)
 	},
 	async GET_GOODITEMLIST({ commit }) {

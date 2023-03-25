@@ -5,6 +5,7 @@
     <DParticular />
     <DGoods />
     <DActionBar />
+    <van-back-top right="15vw" bottom="15vh" />
   </div>
 </template>
 

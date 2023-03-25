@@ -7,11 +7,10 @@ const getSwiperList = () => {
 const getBannerList = () => {
   return axios.get('/bannerList')
 }
-// 商品数据请求
-const getGoodsList = () => {
-  return axios.get('/goodsList')
+// 商品数据请求 分页处理数据 需要传参数page
+const getGoodsList = (page) => {
+  return axios.get('/goodsList',{params: { page: page}})
 }
-
 
 export { 
   getSwiperList,

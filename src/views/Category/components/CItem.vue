@@ -3,7 +3,7 @@
   <div class="container">
     <van-skeleton title :row="3" :loading="loading">
     <van-grid :column-num="2" :border="false">
-      <van-grid-item v-for="item in items" :key="index">
+      <van-grid-item v-for="item in items" :key="item.index">
         <van-image lazy-load :src="item.imgSrc" />
         <text>{{ item.text }}</text>
       </van-grid-item>
@@ -26,6 +26,10 @@ defineProps({
     default: []
   }
 })
+onMounted(() => {
+  loading.value = false
+  closeToast()
+})
 showLoadingToast({
   message: '加载中...',
   forbidClick: true,
@@ -33,10 +37,6 @@ showLoadingToast({
   duration: 0,
   overlayStyle: { backgroundColor: "#fff" }
 });
-onMounted(() => {
-  loading.value = false
-  closeToast()
-})
 </script>
 
 <style lang="stylus" scoped>

@@ -12,7 +12,6 @@ const router = useRouter()
 router.beforeEach((to, from, next) => {
   if (to.meta.isPass && getLocal(TOKEN)) { // 需要登录权限才能访问
       store.state.login.isLogin = true
-      next()
   }
     next()
   if (to.meta.index > from.meta.index) {

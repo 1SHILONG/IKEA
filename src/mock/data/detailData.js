@@ -272,22 +272,176 @@ export default [
     "id": "123",
     "data": {
       "swipeImgUrls": [
-        '',
-        '',
-        '',
-        '',
+        'https://www.ikea.cn/cn/zh/images/products/piplaerka-pi-lai-qia-shu-zhuo__1115620_pe872163_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/piplaerka-pi-lai-qia-shu-zhuo__1115663_pe872201_s5.jpg',
+        'https://www.ikea.cn/cn/zh/images/products/piplaerka-pi-lai-qia-shu-zhuo__1115619_pe872164_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/piplaerka-pi-lai-qia-shu-zhuo__1122111_pe874508_s5.jpg?f=xs',
       ],
       "description": {
         "iid": "13",
-        "title": "VÅGSTRANDA 沃斯棠",
-        "desc": "袋装弹簧床垫 加硬/浅蓝色 150x200 厘米",
-        "price": "2999",
-        "detail": "",
-        "number": "",
+        "title": "PIPLÄRKA 皮莱卡",
+        "desc": "书桌 80x63 厘米",
+        "price": "499",
+        "detail": "这张书桌有五个不同的高度和可以倾斜的台面，不管是练习手工艺或是做作业都非常实用。随着孩子成长，可以灵活调整，满足不同的功能需求。",
+        "number": "205.285.00",
         "inventory": 50,
-        "imgSrc": ""
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/piplaerka-pi-lai-qia-shu-zhuo__1115620_pe872163_s4.jpg?imwidth=300"
       },
-      "particular": ""
+      "particular": "产地见包装\n适用于3岁及以上年龄。\n每个挂钩的最大承重是12公斤。\n可与DAGNAR 道格纳 或GUNRIK 古里克 儿童写字椅（单独出售）组合使用。\n设计师\nIina Vuorivirta"
+    }
+  },
+  {
+    "id": "124",
+    "data": {
+      "swipeImgUrls": [
+        'https://www.ikea.cn/cn/zh/images/products/torgny-tuo-ge-ni-ge-ban-bai-se__0366578_pe548778_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/torgny-tuo-ge-ni-ge-ban-bai-se__0922087_pe788031_s5.jpg?f=xs'
+      ],
+      "description": {
+        "iid": "14",
+        "title": "TORGNY 托格尼",
+        "desc": "搁板 白色",
+        "price": "199",
+        "detail": "利用墙面空间满足储物需求，同时将下方地面空间用来摆放洗衣机和洗衣筐",
+        "number": "102.595.79",
+        "inventory": 50,
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/torgny-tuo-ge-ni-ge-ban-bai-se__0366578_pe548778_s4.jpg?imwidth=300"
+      },
+      "particular": "产地见包装\n室内室外皆可使用。"
+    }
+  },
+  {
+    "id": "125",
+    "data": {
+      "swipeImgUrls": [
+        'https://www.ikea.cn/cn/zh/images/products/askholmen-a-huo-meng-hu-wai-hua-pen-he-peng-jia-zhao-qian-he-se-qi__0311268_pe513350_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/askholmen-a-huo-meng-hu-wai-hua-pen-he-peng-jia-zhao-qian-he-se-qi__0906750_pe618904_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/askholmen-a-huo-meng-hu-wai-hua-pen-he-peng-jia-zhao-qian-he-se-qi__0906742_pe615557_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/askholmen-a-huo-meng-hu-wai-hua-pen-he-peng-jia-zhao-qian-he-se-qi__1041974_ph174108_s5.jpg?f=xs',
+      ],
+      "description": {
+        "iid": "15",
+        "title": "ASKHOLMEN 阿霍蒙",
+        "desc": "户外花盆和棚架 着浅褐色漆",
+        "price": "448",
+        "detail": "你可以将ASKHOLMEN 阿霍蒙 花盆搭配同系列的棚架使用，为攀爬植物提供生长所需的支撑，最终收获满墙的绿意盎然。",
+        "number": "390.539.26",
+        "inventory": 50,
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/askholmen-a-huo-meng-hu-wai-hua-pen-he-peng-jia-zhao-qian-he-se-qi__0311268_pe513350_s4.jpg?imwidth=300"
+      },
+      "particular": "您可以根据展示植物的方式，将搁板放在花箱底部或升高搁板。\n花架可种植植物并提供植物生长所需的支撑，便于放在室外，装饰您的外墙。\n您可以垂直或水平安装花架，并调整高度或宽度，以适应室外空间。 \n为了提高家具的持久性并让您尽享原木魅力，已预先为其涂上一层半透明的木材着色剂。\n产地见包装\n仅建议于户外使用。"
+    }
+  },
+  {
+    "id": "126",
+    "data": {
+      "swipeImgUrls": [
+        'https://www.ikea.cn/cn/zh/images/products/jokkmokk-yue-ke-ma-ke-yi-zhuo-si-yi-fang-gu-se__0736929_pe740809_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/jokkmokk-yue-ke-ma-ke-yi-zhuo-si-yi-fang-gu-se__0870916_pe716638_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/jokkmokk-yue-ke-ma-ke-yi-zhuo-si-yi-fang-gu-se__0208609_pe197452_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/jokkmokk-yue-ke-ma-ke-yi-zhuo-si-yi-fang-gu-se__0870896_pe594898_s5.jpg?f=xs',
+      ],
+      "description": {
+        "iid": "16",
+        "title": "JOKKMOKK 约克马克",
+        "desc": "一桌四椅 仿古色",
+        "price": "1199",
+        "detail": "一套简约坚实的餐桌椅，适合早餐角或小型用餐区。实心松木经久耐用，可经受家庭用餐及围坐在桌旁进行的各项活动。",
+        "number": "603.658.03",
+        "inventory": 50,
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/jokkmokk-yue-ke-ma-ke-yi-zhuo-si-yi-bai-se__0515062_pe639792_s3.jpg"
+      },
+      "particular": "我们已经为你测试过了！桌子表面防水防污、防油耐热、耐刮擦、耐碰撞，结构结实坚固，可经受多年的日常使用。/n产地见包装/n供4人同时使用。/n仅限在室内使用。/n设计师/nCarina Bengs"
+    }
+  },
+  {
+    "id": "127",
+    "data": {
+      "swipeImgUrls": [
+        'https://www.ikea.cn/cn/zh/images/products/stockholm-si-de-ge-er-mo-cha-ji-hu-tao-mu-tie-mian__0181245_pe332924_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/stockholm-si-de-ge-er-mo-cha-ji-hu-tao-mu-tie-mian__0836022_pe601366_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/stockholm-si-de-ge-er-mo-cha-ji-hu-tao-mu-tie-mian__0212281_pe339545_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/stockholm-si-de-ge-er-mo-cha-ji-hu-tao-mu-tie-mian__0212279_pe359382_s5.jpg?f=xs',
+      ],
+      "description": {
+        "iid": "17",
+        "title": "STOCKHOLM 斯德哥尔摩",
+        "desc": "茶几 胡桃木贴面 180x59 厘米",
+        "price": "1999",
+        "detail": "一款致敬现代斯堪的纳维亚设计的产品。这些时尚桌子拥有胡桃木贴面做成的椭圆形桌面，别具优雅和温暖的风格。搁板可以用来存放杂志、书和其他细小物件。",
+        "number": "903.530.78",
+        "inventory": 50,
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/stockholm-si-de-ge-er-mo-cha-ji-hu-tao-mu-tie-mian__0181245_pe332924_s4.jpg?imwidth=300"
+      },
+      "particular": "胡桃木贴面独特的粒纹图案令每件家具都别具一格。\n胡桃木是一种耐磨的天然木材。表面经上漆保护，更加耐用。\n将报纸、遥控器和其他小物件放在桌面下的隔板上，随时取用，十分方便。\n产地见包装\n桌面最大载重：20公斤。\n请与当地部门确认产品是否符合哪些特定的商用要求。\n如果所在社区允许，此产品可进行回收利用或用于能源回收。\n设计师\nOla Wihlborg"
+    }
+  },
+  {
+    "id": "128",
+    "data": {
+      "swipeImgUrls": [
+        'https://www.ikea.cn/cn/zh/images/products/vittsjoe-wei-te-suo-cha-ji-hei-he-se-bo-li__0135348_pe292039_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/vittsjoe-wei-te-suo-cha-ji-hei-he-se-bo-li__0836655_pe601386_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/vittsjoe-wei-te-suo-cha-ji-hei-he-se-bo-li__0185307_pe316781_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/vittsjoe-wei-te-suo-cha-ji-hei-he-se-bo-li__0184627_pe316778_s5.jpg?f=xs',
+      ],
+      "description": {
+        "iid": "18",
+        "title": "VITTSJÖ 维特索",
+        "desc": "茶几 黑褐色/玻璃 75 厘米",
+        "price": "399",
+        "detail": "这张茶几的设计十分简洁，看上去通透轻巧。耐用、朴实的材料十分适合日常生活使用；其中的搁板还能为你提供额外的储物空间。",
+        "number": "002.133.13",
+        "inventory": 50,
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/vittsjoe-wei-te-suo-cha-ji-hei-he-se-bo-li__0135348_pe292039_s4.jpg?imwidth=300"
+      },
+      "particular": "钢化玻璃桌面耐脏、易清洁。\n搁板一侧为黑色，另一面为黑褐色，您可根据喜好选择。\n四脚为可调整式设计，即使在不平的地面上也可稳立。\n产地见包装\n桌面最大载重：10公斤。\n请与当地部门确认产品是否符合哪些特定的商用要求。\n如果所在社区允许，可分类进行回收利用或能源回收。\n请小心轻放！若边缘受损或表面刮伤，可能会导致玻璃突然裂开或破碎。玻璃侧面最脆弱，应尽量避免碰撞。\n设计师\nJohan Kroon"
+    }
+  },
+  {
+    "id": "129",
+    "data": {
+      "swipeImgUrls": [
+        'https://www.ikea.cn/cn/zh/images/products/kvistbro-kui-si-bo-chu-wu-zhuo-bai-se__0477822_pe618485_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/kvistbro-kui-si-bo-chu-wu-zhuo-bai-se__0835551_pe709868_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/kvistbro-kui-si-bo-chu-wu-zhuo-bai-se__1087779_ph183721_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/kvistbro-kui-si-bo-chu-wu-zhuo-bai-se__0706457_ph151112_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/kvistbro-kui-si-bo-chu-wu-zhuo-bai-se__0731745_pe738429_s5.jpg?f=xs'
+      ],
+      "description": {
+        "iid": "19",
+        "title": "KVISTBRO 魁思伯",
+        "desc": "储物桌 白色 44 厘米",
+        "price": "149",
+        "detail": "KVISTBRO 魁思伯\n储物桌\n本产品有多个包装\n包装：2\n直径： 44 厘米\n长度： 41 厘米\n重量： 1.88 公斤\n包装数量： 1\n直径： 45 厘米\n长度： 2 厘米\n重量： 1.70 公斤\n包装数量： 1",
+        "number": "103.494.53",
+        "inventory": 50,
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/kvistbro-kui-si-bo-chu-wu-zhuo-bai-se__0477822_pe618485_s4.jpg?imwidth=300"
+      },
+      "particular": "产地见包装\n桌面最大载重：10公斤。\n设计师\nFrancis Cayouette"
+    }
+  },
+  {
+    "id": "130",
+    "data": {
+      "swipeImgUrls": [
+        'https://www.ikea.cn/cn/zh/images/products/tingby-xin-bei-jiao-lun-bian-zhuo-bai-se__0441842_pe593578_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/tingby-xin-bei-jiao-lun-bian-zhuo-bai-se__0726714_ph143344_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/tingby-xin-bei-jiao-lun-bian-zhuo-bai-se__0726713_ph151020_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/tingby-xin-bei-jiao-lun-bian-zhuo-bai-se__0469771_ph133780_s5.jpg?f=xs',
+        'https://www.ikea.cn/cn/zh/images/products/tingby-xin-bei-jiao-lun-bian-zhuo-bai-se__0749017_pe745379_s5.jpg?f=xs',
+      ],
+      "description": {
+        "iid": "20",
+        "title": "TINGBY 新贝",
+        "desc": "脚轮边桌 白色 50x50 厘米",
+        "price": "149",
+        "detail": "无论白天黑夜，这款桌子都可根据你的需求变化，轻松移动。适用于作为生活/睡眠区或是待客/工作区等多用途空间。",
+        "number": "602.959.28",
+        "inventory": 50,
+        "imgSrc": "https://www.ikea.cn/cn/zh/images/products/tingby-xin-bei-jiao-lun-bian-zhuo-bai-se__0441842_pe593578_s3.jpg"
+      },
+      "particular": "分开的搁板可用来放置杂志等；不仅令您的物品保持整洁，而且，不占用桌面空间。\n脚轮的设计，需要时方便移动。\n产地见包装\n桌面最大载重：10公斤"
     }
   },
 ]

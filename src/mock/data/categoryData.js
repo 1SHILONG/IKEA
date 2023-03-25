@@ -53,31 +53,38 @@ export default
         "goods": [
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/st002/thumbnail.png?v=1679082209773",
-            "text": "书柜和置物架"
+            "text": "书柜和置物架",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/46052/thumbnail.png?v=1679082209773",
-            "text": "储物收纳方案"
+            "text": "储物收纳方案",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/st003/thumbnail.png?v=1679082209773",
-            "text": "橱柜和展示柜"
+            "text": "橱柜和展示柜",
+            "index": 2
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/10475/thumbnail.png?v=1679082209773",
-            "text": "电视和多媒体家具"
+            "text": "电视和多媒体家具",
+            "index": 3
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/19053/thumbnail.png?v=1679082209773",
-            "text": "衣柜"
+            "text": "衣柜",
+            "index": 4
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/30454/thumbnail.png?v=1679082209773",
-            "text": "餐边柜和长几"
+            "text": "餐边柜和长几",
+            "index": 5
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/st006/thumbnail.png?v=1679082209773",
-            "text": "挂钩"
+            "text": "挂钩",
+            "index": 6
           }
         ]
       },
@@ -86,27 +93,33 @@ export default
         "goods": [
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/55002/thumbnail.png?v=1679082209773",
-            "text": "电竞家具"
+            "text": "电竞家具",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/fu003/thumbnail.png?v=1679082209773",
-            "text": "沙发"
+            "text": "沙发",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/55036/thumbnail.png?v=1679082209773",
-            "text": "家具组合"
+            "text": "家具组合",
+            "index": 2
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/bm003/thumbnail.png?v=1679082209773",
-            "text": "床"
+            "text": "床",
+            "index": 3
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/fu004/thumbnail.png?v=1679082209773",
-            "text": "餐桌"
+            "text": "餐桌",
+            "index": 4
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/fu002/thumbnail.png?v=1679082209773",
-            "text": "椅子"
+            "text": "椅子",
+            "index": 5
           },
         ]
       },
@@ -115,27 +128,33 @@ export default
         "goods": [
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/tl004/thumbnail.png?v=1679082209773",
-            "text": "卧室纺织品"
+            "text": "卧室纺织品",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/tl002/thumbnail.png?v=1679082209773",
-            "text": "窗帘和卷帘"
+            "text": "窗帘和卷帘",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/10659/thumbnail.png?v=1679082209773",
-            "text": "靠垫和靠垫套"
+            "text": "靠垫和靠垫套",
+            "index": 2
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/18730/thumbnail.png?v=1679082209773",
-            "text": "儿童纺织品"
+            "text": "儿童纺织品",
+            "index": 3
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/20538/thumbnail.png?v=1679082209773",
-            "text": "厨房用品"
+            "text": "厨房用品",
+            "index": 4
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/10653/thumbnail.png?v=1679082209773",
-            "text": "地毯"
+            "text": "地毯",
+            "index": 5
           },
         ]
       },
@@ -144,23 +163,28 @@ export default
         "goods": [
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/pp003/thumbnail.png?v=1679082209773",
-            "text": "植物"
+            "text": "植物",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/pp004/thumbnail.png?v=1679082209773",
-            "text": "花盆"
+            "text": "花盆",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/20489/thumbnail.png?v=1679082209773",
-            "text": "镜子"
+            "text": "镜子",
+            "index": 2
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/10759/thumbnail.png?v=1679082209773",
-            "text": "时钟"
+            "text": "时钟",
+            "index": 3
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/10760/thumbnail.png?v=1679082209773",
-            "text": "蜡烛"
+            "text": "蜡烛",
+            "index": 4
           }          
         ]
       },
@@ -169,19 +193,23 @@ export default
         "goods": [
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/li002/thumbnail.png?v=1679082209773",
-            "text": "灯具"
+            "text": "灯具",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/36812/thumbnail.png?v=1679082209773",
-            "text": "智能照明"
+            "text": "智能照明",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/10736/thumbnail.png?v=1679082209773",
-            "text": "浴霸"
+            "text": "浴霸",
+            "index": 2
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/17897/thumbnail.png?v=1679082209773",
-            "text": "户外照明"
+            "text": "户外照明",
+            "index": 3
           }
         ]
       },
@@ -190,15 +218,18 @@ export default
         "goods": [
           {
             "imgSrc": "https://static.web.ikea.cn/static/images/catalog/default.svg",
-            "text": "空气净化器"
+            "text": "空气净化器",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/44531/thumbnail.png?v=1679082209773",
-            "text": "电动卷帘"
+            "text": "电动卷帘",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/46194/thumbnail.png?v=1679082209773",
-            "text": "无线音箱"
+            "text": "无线音箱",
+            "index": 2
           }    
         ]
       },
@@ -207,27 +238,33 @@ export default
         "goods": [
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/20719/thumbnail.png?v=1679082209773",
-            "text": "洗脸池"
+            "text": "洗脸池",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/20490/thumbnail.png?v=1679082209773",
-            "text": "浴室镜"
+            "text": "浴室镜",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/10555/thumbnail.png?v=1679082209773",
-            "text": "浴室配件"
+            "text": "浴室配件",
+            "index": 2
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/20723/thumbnail.png?v=1679082209773",
-            "text": "水槽"
+            "text": "水槽",
+            "index": 3
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/40690/thumbnail.png?v=1679082209773",
-            "text": "花洒"
+            "text": "花洒",
+            "index": 4
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/20724/thumbnail.png?v=1679082209773",
-            "text": "水龙头"
+            "text": "水龙头",
+            "index": 5
           }
         ]
       },
@@ -236,19 +273,23 @@ export default
         "goods": [
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/17887/thumbnail.png?v=1679082209773",
-            "text": "遮阳伞"
+            "text": "遮阳伞",
+            "index": 0
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/21958/thumbnail.png?v=1679082209773",
-            "text": "户外储物"
+            "text": "户外储物",
+            "index": 1
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/17897/thumbnail.png?v=1679082209773",
-            "text": "户外照明"
+            "text": "户外照明",
+            "index": 2
           },
           {
             "imgSrc": "https://res.app.ikea.cn/static/public/subcatalog/21957/thumbnail.png?v=1679082209773",
-            "text": "户外地板"
+            "text": "户外地板",
+            "index": 3
           }
         ]
       }

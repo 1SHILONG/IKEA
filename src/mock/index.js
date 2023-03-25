@@ -9,7 +9,7 @@ const usersMap = new Map()// 存储全量用户数据
 const regName = new Set() // 存值用户注册账号
 // 随机的延迟时间, 模拟请求耗时
 Mock.setup({
-  timeout: '50-1000' 
+  timeout: '50-1000'
 })
 // 使用Mock.mock 拦截数据请求 并执行函数
 Mock.mock(/\/swiperList/, 'get', () => {
@@ -24,10 +24,21 @@ Mock.mock(/\/bannerList/, 'get', () => {
     result: bannerList
   }
 })
-Mock.mock(/\/goodsList/, 'get', () => {
-  return {
-    code: 0,
-    result: goodsList
+// 商品页数据较大 需要分页处理 
+Mock.mock(/\/goodsList/, 'get', (options) => {
+  let page = options.url.split('=')[1];
+  let count = page * 20
+  let data = goodsList.filter((item, index) => index < count)
+  if (count > data.length) {
+    return {
+      code: 1,
+      result: false
+    }
+  } else {
+    return {
+      code: 0,
+      result: data
+    }
   }
 })
 Mock.mock(/\/categoryData/, 'get', () => {
@@ -41,10 +52,10 @@ Mock.mock(/\/detailData/, 'get', (options) => {
   let id = options.url.split('=')[1]; // 需要跳转至详情页的商品ID 
   let res = detailData.find(item => item.id === id); // 拿到对应商品数据
   if (res.id === id)
-  return {
-    code: 0,
-    result: res.data
-  }
+    return {
+      code: 0,
+      result: res.data
+    }
 })
 // 模拟登录注册
 Mock.mock(/\/login/, 'post', (options) => {
@@ -60,7 +71,7 @@ Mock.mock(/\/login/, 'post', (options) => {
         token: 'xxvcvdvcvcvdfdfddddddd',
         msg: '登录成功'
       }
-    } else if(result) { // 密码错误
+    } else if (result) { // 密码错误
       return {
         code: 1,
         status: 400,

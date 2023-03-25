@@ -17,9 +17,9 @@
       position="bottom"
       :style="{ height: '70%' }"
     >
-    <DPopup :product="product"/>
+    <DPopup :product="product" @changeShow="changeShow"/>
     </van-popup>
-    <van-button class="r-button" round color="#23579c" type="primary" text="立即购买" />
+    <van-button class="r-button" round color="#23579c" type="primary" text="立即购买" @click="submit"/>
     </div>
   </div>
   <div class="container"></div>
@@ -30,14 +30,23 @@ import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import { ref, computed } from 'vue';
 import DPopup from './DPopup.vue'
+import { showSuccessToast } from 'vant';
 const store = useStore();
 const router = useRouter();
 const show = ref(false)
+// 获得子组件传递的值 关闭弹出层
+const changeShow = (res) => {
+  show.value = res
+}
 const o = computed(() => store.getters['cart/totalProducts']); // 拿到购物车数量数据
 let product = store.state.detail.description; // 拿到当前商品
 const toCart = () => router.push('/cart');
+// 加入购物车 弹出层
 const showPopup = () => {
   show.value = true
+}
+const submit = () => {
+  showSuccessToast('请您支付坤坤🐔')
 }
 </script>
 
