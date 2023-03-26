@@ -60,7 +60,7 @@ onMounted(() => {
     if (show.value) { // 取完数据 不再重复请求
       return
     }
-    showToast('加载中...')
+    showToast('🐔🐔🐔🥚🥚🥚。。')
     // 首次上拉加载 请求第二页数据
     await store.dispatch("home/GET_GOODSLIST", page.value);
     await store.dispatch("home/GET_GOODITEMLIST");
