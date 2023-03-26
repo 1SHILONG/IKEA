@@ -22,7 +22,7 @@
         />
       </template>
     </van-swipe-cell>
-    <van-submit-bar :price="o.totalPrice" button-text="提交订单" @submit="onSubmit">
+    <van-submit-bar :price="o.totalPrice" button-text="提交订单" @submit="onSubmit(o.totalPrice)">
       <van-checkbox v-model="checked" icon-size="24px" @click="checkAll"></van-checkbox>
     </van-submit-bar>
   </van-checkbox-group>
@@ -31,6 +31,7 @@
 <script setup>
 import { useStore } from 'vuex';
 import { computed, ref } from 'vue';
+import { showToast } from 'vant';
 const store = useStore()
 const checked = ref([]);
 const checkboxGroup = ref(null);
@@ -45,6 +46,9 @@ const deleteProduct = (item) => { // 删除商品项
   if (store.state.cart.products.get(item.id)) {
     store.commit('cart/DETALE_PRODUCT', item.id)
   }
+}
+const onSubmit = (val) => {
+  showToast(`请您支付${val / 100}只因🐔`)
 }
 </script>
 
