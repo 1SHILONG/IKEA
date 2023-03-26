@@ -20,7 +20,7 @@ import { onMounted } from 'vue';
 
 const store = useStore();
 const getGoodsList = async () => {
-  await store.dispatch("home/GET_GOODSLIST");
+  await store.dispatch("home/GET_GOODSLIST", 1);
 }
 onMounted(async () => {
   await getGoodsList();

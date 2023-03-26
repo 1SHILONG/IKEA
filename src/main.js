@@ -37,14 +37,13 @@ import {
   Tab,
   Tabs,
   TextEllipsis
-} from 'vant'; 
-import 'vant/lib/index.css';
+} from 'vant';  // 按需加载
+import 'vant/lib/index.css'; // 引入vant样式
 import 'lib-flexible/flexible';// rem 移动端适配
-import '@/mock/index.js';
-import '@/common/style/index.styl';
+import '@/mock/index.js'; // 全局引入mock
+import '@/common/style/index.styl'; // reset等全局样式
 
 const app = createApp(App)
-
 app 
   .use(router)
   .use(store)

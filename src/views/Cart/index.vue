@@ -36,7 +36,7 @@ onMounted(async () => {
   await getGoodsList();
 });
 const getGoodsList = async () => {
-  await store.dispatch("home/GET_GOODSLIST");
+  await store.dispatch("home/GET_GOODSLIST", 1);
 }
 </script>
 
