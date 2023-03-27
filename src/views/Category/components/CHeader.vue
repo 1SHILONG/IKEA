@@ -1,5 +1,6 @@
 <template>
   <div class="container van-hairline--bottom">
+    <router-link to="/search">
     <div class="c-search">
       <van-swipe class="c-swipe" vertical :autoplay="3000" :show-indicators="false">
         <van-swipe-item 
@@ -11,6 +12,7 @@
       </van-swipe-item>
       </van-swipe>
     </div>
+    </router-link>
     <div style="height: 24px;display: inline-block;line-height: 50px; margin-left: 14px;">
       <van-icon class="scan" name="scan" size="24px" />
     </div>
@@ -21,8 +23,8 @@
 <script setup>
 import { useStore } from 'vuex';
 import { computed } from 'vue';
-const store = useStore()
-const hotWords = computed(() => store.state.category.hotWords)
+const store = useStore();
+const hotWords = computed(() => store.state.category.hotWords);
 </script>
 
 <style lang="stylus" scoped>

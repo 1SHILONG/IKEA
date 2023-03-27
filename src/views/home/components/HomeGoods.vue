@@ -26,5 +26,4 @@ onMounted(async () => {
 .warpper
   height 1000px
   overflow hidden
-  // white-space nowrap 
 </style>

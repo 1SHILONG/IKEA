@@ -26,15 +26,12 @@
 <script setup>
 import Swiper from '@/components/Swiper.vue';
 import DNavBar from './DNavBar.vue';
-import { computed , onMounted } from 'vue';
+import { computed } from 'vue';
 import { useStore } from "vuex";
 
 const store = useStore();
 const swiperList = computed(() => store.state.detail.swiperList);
 const description = computed(() => store.state.detail.description);
-onMounted(async () => {
-
-})
 </script>
 
 <style lang="stylus" scoped>

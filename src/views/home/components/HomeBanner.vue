@@ -6,10 +6,10 @@
   </h1>
   <div class="container">
     <div class="scroll-wrapper" ref="scroll">
-      <div class="scroll-content" ref="content">
+      <div class="scroll-content">
         <div class="sct-item" v-for="(item, index) in props.bannerList" :key="index" v-lazy="item">
           <router-link to="/other">
-            <img :src="item.imgSrc"/>
+            <img :src="item.imgSrc" v-lazy="item.imgSrc" />
           </router-link>
             <div class="dsc-item">{{ item.title }}</div>
         </div>
@@ -30,13 +30,8 @@ const props = defineProps({
   }
 })
 const scroll = ref(null);
-const content = ref(null);
 let bs = null;
-let wrapperWidth = 0;
-let contentWidth = 0;
 onMounted(() => {
-  wrapperWidth = scroll.value.offsetWidth;
-  contentWidth = content.value.offsetWidth;
   // betterscroll 会阻止原生click 需要设置click参数
   bs = new BScroll(scroll.value, {
     probeType: 2,
@@ -45,7 +40,6 @@ onMounted(() => {
     click: true
   })
 })
-
 </script>
 
 <style lang="stylus" scoped>

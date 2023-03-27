@@ -1,7 +1,7 @@
 import { showToast } from 'vant'
 const state = {
   products: new Map(), // 无重复储存商品 做字典使用
-  productItms: [] // 存储商品数据 引用式赋值 实时更新数据
+  productItems: [] // 存储商品数据 引用式赋值 实时更新数据
 }
 
 const mutations = {
@@ -19,11 +19,11 @@ const mutations = {
       state.products.set(val.iid, val)
       val.quantity = val.count
       val.inventory = val.inventory - val.quantity
-      state.productItms.push(val)
+      state.productItems.push(val)
     }
   },
   DETALE_PRODUCT: (state, val) => {
-    state.productItms = state.productItms.filter(item => item.iid !== val)
+    state.productItems = state.productItems.filter(item => item.iid !== val)
   }
 }
 
@@ -33,7 +33,7 @@ const actions = {
 const getters = {
   // 筛选数据返回
   cartProducts: (state) => {
-    return state.productItms.map(item => ({
+    return state.productItems.map(item => ({
       id: item.iid,
       title: item.title,
       price: `${item.price}.00`,
@@ -44,9 +44,9 @@ const getters = {
   },
   totalProducts: (state) => {
     // 计算总价
-    let totalPrice = state.productItms.reduce((pre, cru) => pre + cru.price * cru.quantity, 0) * 100
+    let totalPrice = state.productItems.reduce((pre, cru) => pre + cru.price * cru.quantity, 0) * 100
     // 计算总数
-    let totalQuantity = state.productItms.reduce((pre, cru) => pre + cru.quantity, 0)
+    let totalQuantity = state.productItems.reduce((pre, cru) => pre + cru.quantity, 0)
     totalQuantity > 0 ? totalQuantity : undefined
     return {
       totalPrice: totalPrice,
@@ -54,7 +54,7 @@ const getters = {
     }
   },
   // 购物商品数组长度
-  length: (state) => state.productItms.length
+  length: (state) => state.productItems.length
 }
 
 export default {

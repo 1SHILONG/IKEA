@@ -17,8 +17,10 @@
         <div>分类</div>
       </router-link>
       <router-link class="nav-list-item" to="cart">
-        <van-icon name="shopping-cart-o" />
-        <div>购物袋</div>
+        <div @click="backTop">
+          <van-icon name="shopping-cart-o" />
+          <div>购物袋</div>
+        </div>
       </router-link>
       <router-link class="nav-list-item" to="user">
         <van-icon name="manager-o" />
@@ -41,7 +43,7 @@ const props = defineProps({
 // 回到顶部
 const backTop = () => {
   let scrollTop = window.pageYOffset || document.documentElement || document.body.scrollTop;
-  if (scrollTop > 0) { // 防止频繁点击
+  if (scrollTop > 0) { 
     window.scrollTo({
       top: 0,
       behavior: "smooth"

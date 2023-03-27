@@ -11,7 +11,7 @@
     </div>
     <CGoods />
   </div>
-  <NavBar/>
+  <NavBar :cartShow="cartShow"/>
 </template>
 
 <script setup>
@@ -21,8 +21,10 @@ import Empty from './components/Empty.vue';
 import CGoods from './components/CGoods.vue';
 import CProducts from './components/CProducts.vue';
 import { useStore } from 'vuex';
-import { onMounted, computed } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import { showLoadingToast } from 'vant';
+
+const cartShow = ref(true) 
 const store = useStore();
 const length = computed(() => store.getters['cart/length'])
 showLoadingToast({
@@ -31,7 +33,6 @@ showLoadingToast({
   overlay: true,
   overlayStyle: { backgroundColor: "#fff" }
 });
-
 onMounted(async () => {
   await getGoodsList();
 });

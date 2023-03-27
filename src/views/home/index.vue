@@ -1,4 +1,5 @@
 <template>
+  <!-- 数据请求到达前 提示在加载 -->
   <div v-if="loading">
     <van-image width="100vw" height="100vh" fit="fill" position="50% 50%">
       <template v-slot:loading>

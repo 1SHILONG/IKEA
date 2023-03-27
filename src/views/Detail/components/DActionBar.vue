@@ -4,13 +4,13 @@
     <!-- 购物车徽标 未有商品数时 不显示 -->
     <van-action-bar-icon 
       icon="cart-o" 
-      text="购物车" 
+      text="购物袋" 
       :badge="o.totalQuantity > 0 ? o.totalQuantity : ''" 
       @click="toCart" 
     />
     <van-action-bar-icon icon="shop-o" text="店铺" />
     <div class="button">
-    <van-button class="l-button" plain round type="primary" text="加入购物车" @click="showPopup" />
+    <van-button class="l-button" plain round type="primary" text="加入购物袋" @click="showPopup" />
     <van-popup
       v-model:show="show"
       round

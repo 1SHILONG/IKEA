@@ -32,7 +32,6 @@ defineProps({
 let state = reactive({
   show: [true] // 高亮效果默认选择第一项
 })
-
 const onClick = (index, firstList) => {
   state.show = Array(firstList.length) 
   state.show[index] = true
@@ -84,8 +83,6 @@ nextTick(() => { // 更早拿到更新数据
 onBeforeUnmount(() => { // 卸载时移除监听的事件
   window.removeEventListener('scroll', handleScroll);
 })
-
-
 </script>
 
 <style lang="stylus" scoped>
