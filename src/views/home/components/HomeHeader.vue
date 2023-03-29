@@ -24,7 +24,6 @@
   <van-sticky class="search-bar" :class="{'search-bar-show': show}">
     <van-search 
       :class="{ 'search-normal': !props.isSort, 'search-sort': props.isSort }" 
-      v-model="value" 
       shape="round" 
       readonly 
       @click-input="onClick"
